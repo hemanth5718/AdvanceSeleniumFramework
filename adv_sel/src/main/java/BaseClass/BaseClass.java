@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 
-import crm.generic.databaseutility.copy.DataBaseUtility;
+import crm.generic.databaseutility.DataBaseUtility;
 import crm.generic.fileutility.ExcelUtility;
 import crm.generic.fileutility.FileUtility;
 import crm.generic.webdriverutility.JavaUtility;

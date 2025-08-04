@@ -59,7 +59,6 @@ public class ListImpClass extends BaseClass implements ITestListener, ISuiteList
 	public void onTestFailure(ITestResult result) {
 		TakesScreenshot ts = (TakesScreenshot)edriver;
 		String filePath = ts.getScreenshotAs(OutputType.BASE64);
-		
 		String testName = result.getMethod().getMethodName();
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		test.addScreenCaptureFromBase64String(filePath,testName+"_"+time);

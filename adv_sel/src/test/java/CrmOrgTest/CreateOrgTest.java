@@ -19,10 +19,10 @@ import objectRepositoryUtility.OrganizationInfoPage;
 import objectRepositoryUtility.OrganizationPage;
 
 
-public class CreateOrg extends BaseClass {
+public class CreateOrgTest extends BaseClass {
 
 	@Test(groups = "smokeTest")
-	public void createOrg() throws Throwable {
+	public void createOrgTest() throws Throwable {
 
 		UtilityClassObject.getTest().log(Status.INFO,"read data from excel");
 		int rnum = jlib.getRandomNumber();
@@ -48,7 +48,7 @@ public class CreateOrg extends BaseClass {
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 		String headerInfo = oip.getHeader().getText();
 		boolean status1 = headerInfo.contains(orgname);
-		Assert.assertEquals(status1, false);
+		Assert.assertEquals(status1, true);
 		
 		// verify orgName
 		String actualOrgName = oip.getActOrgName().getText();
@@ -58,7 +58,7 @@ public class CreateOrg extends BaseClass {
 	}
 
 	@Test(groups = "regressionTest")
-	public void CreateOrgWithIndustry() throws Throwable {
+	public void CreateOrgWithIndustryTest() throws Throwable {
 
 		int rnum = jlib.getRandomNumber();
 
@@ -88,7 +88,7 @@ public class CreateOrg extends BaseClass {
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 		String industryName = oip.getIndName().getText();
 		boolean status4 = industryName.contains(indName);
-		Assert.assertEquals(status4, true);
+		Assert.assertEquals(status4, false);
 	
 		// verify industry type
 		String industryType = oip.getIndType().getText();
@@ -99,7 +99,7 @@ public class CreateOrg extends BaseClass {
 	}
 
 	@Test(groups = "regressionTest")
-	public void CreateOrgWithPhNo() throws Throwable {
+	public void CreateOrgWithPhNoTest() throws Throwable {
 
 		int rnum = jlib.getRandomNumber();
 

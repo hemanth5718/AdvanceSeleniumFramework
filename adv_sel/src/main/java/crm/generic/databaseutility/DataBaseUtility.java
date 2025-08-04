@@ -1,4 +1,4 @@
-package crm.generic.databaseutility.copy;
+package crm.generic.databaseutility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -14,9 +14,7 @@ import java.util.Random;
  */
 public class JavaUtility {
 	
-	/**
-	 * @author heman
-	 **/
+
 	public int getRandomNumber()
 	{
 		
