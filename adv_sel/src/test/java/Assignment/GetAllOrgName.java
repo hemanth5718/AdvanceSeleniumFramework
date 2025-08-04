@@ -33,6 +33,7 @@ public class GetAllOrgName extends BaseClass {
 				}
 				Thread.sleep(5000);
 				op.getNextBtn().click();
+				System.out.println("hello");
 			
 			}
 			
