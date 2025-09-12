@@ -10,7 +10,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
 
 import crm.generic.databaseutility.DataBaseUtility;
 import crm.generic.fileutility.ExcelUtility;
@@ -39,8 +38,8 @@ public class BaseClass {
 
 	//@Parameters("BROWSER")
 	@BeforeClass(alwaysRun = true)
-	//public void configBC() throws Throwable {
-		public void configBC(@Optional("chrome")String browser) throws Throwable {
+	public void configBC() throws Throwable {
+		//public void configBC(@Optional("chrome")String browser) throws Throwable {
 		//String browser
 		System.out.println("==launch the Browser==");
 		String BROWSER = flib.getDataFromPropertiesFile("browser");
